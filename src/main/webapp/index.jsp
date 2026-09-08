@@ -1167,7 +1167,7 @@
         <div id="mobileMenu">
             <div class="container">
                 <ul>
-                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
                     <li><a href="#categories"><i class="fas fa-th-large"></i> Categories</a></li>
                     <li><a href="#products"><i class="fas fa-fire"></i> Trending</a></li>
                     <li><a href="#deals"><i class="fas fa-tag"></i> Deals</a></li>
