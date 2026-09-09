@@ -1,5 +1,3 @@
-This is a complete HTML document for a modern, user-friendly e-commerce homepage named "NexusShop". It features a clean, responsive design with a focus on browsing products and deals.
-```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -1507,4 +1505,3 @@ This is a complete HTML document for a modern, user-friendly e-commerce homepage
     </script>
 </body>
 </html>
-```
