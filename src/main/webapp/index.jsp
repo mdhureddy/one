@@ -3,41 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NexusShop · Modern E‑Commerces</title>
+    <title>NexusShop · Monochrome</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
     <style>
-        /* ========== ROOT VARIABLES ========== */
+        /* ========== ROOT VARIABLES – BLACK & WHITE ========== */
         :root {
-            --bg: #f6f9fc;
+            --bg: #f5f5f5;
             --bg-card: #ffffff;
-            --primary: #0a2540;
-            --primary-light: #1a3a5c;
-            --accent: #0077b6;
-            --accent-light: #caf0f8;
-            --accent-dark: #023e8a;
-            --muted: #4a5c6c;
-            --muted-light: #8a9aa8;
-            --surface: #eef3f7;
-            --success: #2a9d8f;
-            --warning: #f4a261;
+            --primary: #111111;
+            --primary-light: #2a2a2a;
+            --accent: #000000;
+            --accent-light: #e0e0e0;
+            --accent-dark: #000000;
+            --muted: #4a4a4a;
+            --muted-light: #7a7a7a;
+            --surface: #eaeaea;
+            --success: #222222;
+            --warning: #888888;
             --radius: 20px;
             --radius-sm: 12px;
-            --shadow: 0 8px 30px rgba(10, 37, 64, 0.06);
-            --shadow-hover: 0 16px 56px rgba(10, 37, 64, 0.10);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 16px 56px rgba(0, 0, 0, 0.10);
             --transition: 0.25s cubic-bezier(0.2, 0, 0, 1);
             --container: 1280px;
         }
 
         /* ========== RESET ========== */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -66,7 +62,7 @@
             overflow: hidden; clip: rect(0,0,0,0); border: 0;
         }
 
-        /* ========== BUTTONS ========== */
+        /* ========== BUTTONS – B&W ========== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -81,16 +77,16 @@
             letter-spacing: -0.01em;
         }
         .btn-primary {
-            background: var(--accent);
+            background: var(--primary);
             color: #fff;
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px rgba(0,119,182,0.20);
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
         }
         .btn-primary:hover {
-            background: var(--accent-dark);
-            border-color: var(--accent-dark);
+            background: #2a2a2a;
+            border-color: #2a2a2a;
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 12px 28px rgba(0,119,182,0.30);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
         }
         .btn-secondary {
             background: var(--primary);
@@ -98,15 +94,15 @@
             border-color: var(--primary);
         }
         .btn-secondary:hover {
-            background: var(--primary-light);
-            border-color: var(--primary-light);
+            background: #2a2a2a;
+            border-color: #2a2a2a;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(10,37,64,0.15);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
         }
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            border-color: rgba(10,37,64,0.20);
+            border-color: rgba(0,0,0,0.25);
         }
         .btn-outline:hover {
             background: var(--primary);
@@ -130,15 +126,15 @@
             font-size: 13px;
         }
 
-        /* ========== HEADER ========== */
+        /* ========== HEADER – B&W ========== */
         header {
             position: sticky;
             top: 0;
             z-index: 110;
-            background: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(10,37,64,0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         .header-inner {
             display: flex;
@@ -159,8 +155,8 @@
             color: var(--primary);
             flex-shrink: 0;
         }
-        .brand .accent { color: var(--accent); }
-        .brand i { font-size: 28px; color: var(--accent); }
+        .brand .accent { color: var(--primary); }
+        .brand i { font-size: 28px; color: var(--primary); }
 
         nav.main-nav ul {
             display: flex;
@@ -215,7 +211,7 @@
             position: absolute;
             top: -2px;
             right: -2px;
-            background: var(--accent);
+            background: var(--primary);
             color: #fff;
             font-size: 11px;
             font-weight: 700;
@@ -238,9 +234,9 @@
             min-width: 240px;
         }
         .search-wrap:focus-within {
-            border-color: var(--accent);
+            border-color: var(--primary);
             background: #fff;
-            box-shadow: 0 0 0 6px rgba(0,119,182,0.08);
+            box-shadow: 0 0 0 6px rgba(0,0,0,0.06);
         }
         .search-wrap input {
             border: 0;
@@ -258,7 +254,7 @@
             font-size: 16px;
             transition: var(--transition);
         }
-        .search-wrap button:hover { color: var(--accent); }
+        .search-wrap button:hover { color: var(--primary); }
 
         .mobile-toggle {
             display: none;
@@ -275,7 +271,7 @@
         #mobileMenu {
             display: none;
             background: #fff;
-            border-top: 1px solid rgba(10,37,64,0.04);
+            border-top: 1px solid rgba(0,0,0,0.05);
             padding: 16px 0 24px;
         }
         #mobileMenu ul {
@@ -297,7 +293,7 @@
         #mobileMenu ul li a:hover { background: var(--surface); }
         #mobileMenu ul li a i { width: 24px; color: var(--muted); }
 
-        /* ========== HERO ========== */
+        /* ========== HERO – B&W ========== */
         .hero {
             position: relative;
             display: flex;
@@ -307,14 +303,14 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 24px 24px 0;
-            background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%);
+            background: #1a1a1a;
         }
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-            opacity: 0.20;
+            opacity: 0.15;
             z-index: 0;
         }
         .hero .container {
@@ -323,8 +319,8 @@
         }
         .hero .badge {
             display: inline-block;
-            background: rgba(0,119,182,0.30);
-            color: #caf0f8;
+            background: rgba(255,255,255,0.12);
+            color: #ddd;
             padding: 6px 20px;
             border-radius: 60px;
             font-weight: 600;
@@ -343,7 +339,7 @@
             margin-bottom: 16px;
         }
         .hero p {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.8);
             font-size: 18px;
             max-width: 540px;
             margin-bottom: 32px;
@@ -379,7 +375,7 @@
         }
         .section-header .view-all {
             font-weight: 600;
-            color: var(--accent);
+            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -389,10 +385,10 @@
         }
         .section-header .view-all:hover {
             gap: 14px;
-            color: var(--accent-dark);
+            color: #000;
         }
 
-        /* ========== CATEGORIES ========== */
+        /* ========== CATEGORIES – B&W ========== */
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -411,23 +407,23 @@
         .cat-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--accent-light);
+            border-color: #ccc;
             background: #fff;
         }
         .cat-card .icon-wrap {
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: var(--accent-light);
+            background: var(--surface);
             display: grid;
             place-items: center;
             margin: 0 auto 14px;
             font-size: 26px;
-            color: var(--accent);
+            color: var(--primary);
             transition: var(--transition);
         }
         .cat-card:hover .icon-wrap {
-            background: var(--accent);
+            background: var(--primary);
             color: #fff;
             transform: scale(1.05);
         }
@@ -441,7 +437,7 @@
             margin-top: 6px;
         }
 
-        /* ========== PRODUCTS ========== */
+        /* ========== PRODUCTS – B&W ========== */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -460,7 +456,7 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--accent-light);
+            border-color: #ccc;
         }
         .product-card .img-wrap {
             position: relative;
@@ -473,15 +469,17 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            filter: grayscale(10%);
         }
         .product-card:hover .img-wrap img {
             transform: scale(1.05);
+            filter: grayscale(0%);
         }
         .product-card .badge {
             position: absolute;
             top: 14px;
             left: 14px;
-            background: var(--accent);
+            background: var(--primary);
             color: #fff;
             padding: 4px 16px;
             border-radius: 60px;
@@ -490,8 +488,8 @@
             letter-spacing: 0.3px;
         }
         .product-card .badge.sale {
-            background: var(--warning);
-            color: var(--primary);
+            background: #555;
+            color: #fff;
         }
         .product-card .wish-btn {
             position: absolute;
@@ -510,7 +508,7 @@
         }
         .product-card .wish-btn:hover {
             background: #fff;
-            color: var(--accent);
+            color: #000;
             transform: scale(1.10);
         }
         .product-card .body {
@@ -557,7 +555,7 @@
             align-items: center;
             gap: 6px;
             font-size: 14px;
-            color: #f5a623;
+            color: #888;
         }
         .product-card .body .rating span {
             color: var(--muted);
@@ -583,14 +581,14 @@
             gap: 8px;
         }
         .product-card .footer .add-btn:hover {
-            background: var(--accent);
+            background: #2a2a2a;
             transform: scale(1.02);
         }
         .product-card .footer .add-btn.added {
             background: var(--success);
         }
 
-        /* ========== DEAL ========== */
+        /* ========== DEAL – B&W ========== */
         .deal-wrap {
             display: flex;
             gap: 0;
@@ -608,6 +606,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: grayscale(20%);
         }
         .deal-wrap .deal-content {
             flex: 1;
@@ -618,8 +617,8 @@
         }
         .deal-wrap .deal-content .tag {
             display: inline-block;
-            background: var(--warning);
-            color: var(--primary);
+            background: #555;
+            color: #fff;
             padding: 6px 18px;
             border-radius: 60px;
             font-size: 12px;
@@ -657,7 +656,7 @@
             margin: 6px 0 18px;
         }
         .deal-wrap .deal-content .stock strong {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .timer-grid {
@@ -685,7 +684,7 @@
             letter-spacing: 0.6px;
         }
 
-        /* ========== TESTIMONIALS ========== */
+        /* ========== TESTIMONIALS – B&W ========== */
         .testimonials-scroll {
             display: flex;
             gap: 24px;
@@ -698,7 +697,7 @@
             height: 6px;
         }
         .testimonials-scroll::-webkit-scrollbar-thumb {
-            background: var(--accent-light);
+            background: #aaa;
             border-radius: 60px;
         }
         .testimonial-card {
@@ -714,7 +713,7 @@
             box-shadow: var(--shadow-hover);
         }
         .testimonial-card .stars {
-            color: #f5a623;
+            color: #888;
             font-size: 18px;
             letter-spacing: 3px;
             margin-bottom: 12px;
@@ -737,6 +736,7 @@
             border-radius: 50%;
             object-fit: cover;
             background: var(--surface);
+            filter: grayscale(30%);
         }
         .testimonial-card .author .name {
             font-weight: 600;
@@ -747,9 +747,9 @@
             color: var(--muted);
         }
 
-        /* ========== NEWSLETTER ========== */
+        /* ========== NEWSLETTER – B&W ========== */
         .newsletter-wrap {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: #1a1a1a;
             border-radius: var(--radius);
             padding: 52px 60px;
             color: #fff;
@@ -765,7 +765,7 @@
             margin-bottom: 4px;
         }
         .newsletter-wrap .text p {
-            opacity: 0.80;
+            opacity: 0.75;
             font-size: 16px;
         }
         .newsletter-wrap form {
@@ -782,27 +782,27 @@
             border-radius: 60px;
             border: 0;
             font-size: 15px;
-            background: rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.08);
             color: #fff;
             transition: var(--transition);
             outline: 2px solid transparent;
         }
         .newsletter-wrap form input::placeholder {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.4);
         }
         .newsletter-wrap form input:focus {
-            outline-color: var(--accent);
-            background: rgba(255,255,255,0.18);
+            outline-color: #aaa;
+            background: rgba(255,255,255,0.15);
         }
         .newsletter-wrap form .btn {
-            background: var(--accent);
-            color: #fff;
-            border-color: var(--accent);
+            background: #fff;
+            color: #000;
+            border-color: #fff;
             padding: 16px 36px;
         }
         .newsletter-wrap form .btn:hover {
-            background: var(--accent-dark);
-            border-color: var(--accent-dark);
+            background: #ddd;
+            border-color: #ddd;
         }
         #newsletterMsg {
             margin-top: 12px;
@@ -811,11 +811,11 @@
             width: 100%;
         }
 
-        /* ========== FOOTER ========== */
+        /* ========== FOOTER – B&W ========== */
         footer {
             margin-top: 20px;
             padding: 48px 0 32px;
-            border-top: 1px solid rgba(10,37,64,0.04);
+            border-top: 1px solid rgba(0,0,0,0.05);
         }
         .footer-grid {
             display: grid;
@@ -850,7 +850,7 @@
             font-size: 17px;
         }
         .footer-grid .brand-col .socials a:hover {
-            background: var(--accent);
+            background: var(--primary);
             color: #fff;
         }
         .footer-grid .col h5 {
@@ -871,12 +871,12 @@
             transition: var(--transition);
         }
         .footer-grid .col ul li a:hover {
-            color: var(--accent);
+            color: #000;
         }
         .footer-bottom {
             text-align: center;
             padding-top: 24px;
-            border-top: 1px solid rgba(10,37,64,0.04);
+            border-top: 1px solid rgba(0,0,0,0.05);
             color: var(--muted-light);
             font-size: 14px;
         }
@@ -1182,7 +1182,7 @@
     <!-- ===== SCRIPT ===== -->
     <script>
         // ============================================================
-        // DATA
+        // DATA (unchanged)
         // ============================================================
         const CATEGORIES = [
             { id: 'phones', name: 'Smartphones', icon: 'fa-mobile-alt', count: 24 },
@@ -1375,7 +1375,7 @@
                 }, 1500);
             }
             const cartBtn = document.getElementById('cartBtn');
-            cartBtn.style.color = 'var(--accent)';
+            cartBtn.style.color = '#000';
             setTimeout(() => cartBtn.style.color = '', 400);
         }
 
@@ -1455,7 +1455,7 @@
             updateCartCount();
             const orig = this.innerHTML;
             this.innerHTML = '<i class="fas fa-check"></i> Added!';
-            this.style.background = 'var(--success)';
+            this.style.background = '#222';
             setTimeout(() => {
                 this.innerHTML = orig;
                 this.style.background = '';
@@ -1472,7 +1472,7 @@
                 return;
             }
             newsletterMsg.textContent = '🎉 Thanks for subscribing!';
-            newsletterMsg.style.color = '#a8e6cf';
+            newsletterMsg.style.color = '#aaa';
             newsletterMsg.style.display = 'block';
             newsletterEmail.value = '';
             setTimeout(() => {
@@ -1501,7 +1501,7 @@
             }
         });
 
-        console.log('🚀 NexusShop — user‑friendly e‑commerce demo loaded.');
+        console.log('⚫ NexusShop – monochrome theme loaded.');
     </script>
 </body>
 </html>
