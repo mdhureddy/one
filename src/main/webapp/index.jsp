@@ -405,7 +405,7 @@
             align-items: flex-end;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 32px;
+            margin-bottom: 33px;
             flex-wrap: wrap;
         }
         .section-header .title-group h2 {
