@@ -1,33 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NexusShop · Monochrome</title>
+    <title>NexusShop · Aurora</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
     <style>
-        /* ========== ROOT VARIABLES – BLACK & WHITE ========== */
+        /* ========== ROOT VARIABLES – AURORA THEME ========== */
         :root {
-            --bg: #f5f5f5;
+            --bg: #f8faff;
             --bg-card: #ffffff;
-            --primary: #111111;
-            --primary-light: #2a2a2a;
-            --accent: #000000;
-            --accent-light: #e0e0e0;
-            --accent-dark: #000000;
-            --muted: #4a4a4a;
-            --muted-light: #7a7a7a;
-            --surface: #eaeaea;
-            --success: #222222;
-            --warning: #888888;
-            --radius: 20px;
-            --radius-sm: 12px;
-            --shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 16px 56px rgba(0, 0, 0, 0.10);
+            --primary: #1e3a8a;
+            --primary-light: #3b5bdb;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --accent-dark: #1e40af;
+            --muted: #475569;
+            --muted-light: #94a3b8;
+            --surface: #eef2ff;
+            --surface-hover: #e0e7ff;
+            --success: #0f766e;
+            --warning: #b45309;
+            --radius: 24px;
+            --radius-sm: 14px;
+            --shadow: 0 12px 40px -8px rgba(30, 58, 138, 0.08);
+            --shadow-hover: 0 24px 60px -12px rgba(30, 58, 138, 0.18);
             --transition: 0.25s cubic-bezier(0.2, 0, 0, 1);
             --container: 1280px;
         }
@@ -62,7 +63,7 @@
             overflow: hidden; clip: rect(0,0,0,0); border: 0;
         }
 
-        /* ========== BUTTONS – B&W ========== */
+        /* ========== BUTTONS – AURORA ========== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -80,29 +81,29 @@
             background: var(--primary);
             color: #fff;
             border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.20);
         }
         .btn-primary:hover {
-            background: #2a2a2a;
-            border-color: #2a2a2a;
+            background: var(--primary-light);
+            border-color: var(--primary-light);
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+            box-shadow: 0 14px 32px rgba(30, 58, 138, 0.28);
         }
         .btn-secondary {
-            background: var(--primary);
+            background: var(--accent);
             color: #fff;
-            border-color: var(--primary);
+            border-color: var(--accent);
         }
         .btn-secondary:hover {
-            background: #2a2a2a;
-            border-color: #2a2a2a;
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+            box-shadow: 0 10px 28px rgba(37, 99, 235, 0.25);
         }
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            border-color: rgba(0,0,0,0.25);
+            border-color: rgba(30, 58, 138, 0.25);
         }
         .btn-outline:hover {
             background: var(--primary);
@@ -111,14 +112,14 @@
             transform: translateY(-2px);
         }
         .btn-ghost {
-            background: rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.15);
             color: #fff;
-            border-color: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.30);
             backdrop-filter: blur(4px);
         }
         .btn-ghost:hover {
-            background: rgba(255,255,255,0.25);
-            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.28);
+            border-color: rgba(255,255,255,0.50);
             transform: translateY(-2px);
         }
         .btn-sm {
@@ -126,15 +127,16 @@
             font-size: 13px;
         }
 
-        /* ========== HEADER – B&W ========== */
+        /* ========== HEADER – AURORA ========== */
         header {
             position: sticky;
             top: 0;
             z-index: 110;
-            background: rgba(255,255,255,0.92);
+            background: rgba(255,255,255,0.90);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.06);
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.04);
         }
         .header-inner {
             display: flex;
@@ -155,8 +157,8 @@
             color: var(--primary);
             flex-shrink: 0;
         }
-        .brand .accent { color: var(--primary); }
-        .brand i { font-size: 28px; color: var(--primary); }
+        .brand .accent { color: var(--accent); }
+        .brand i { font-size: 28px; color: var(--accent); }
 
         nav.main-nav ul {
             display: flex;
@@ -178,7 +180,8 @@
         nav.main-nav li a:hover,
         nav.main-nav li a.active {
             background: var(--surface);
-            color: var(--primary);
+            color: var(--accent);
+            box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.12);
         }
         nav.main-nav li a i { font-size: 15px; }
 
@@ -201,7 +204,7 @@
         }
         .header-actions .icon-btn:hover {
             background: var(--surface);
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .cart-wrap {
@@ -211,7 +214,7 @@
             position: absolute;
             top: -2px;
             right: -2px;
-            background: var(--primary);
+            background: var(--accent);
             color: #fff;
             font-size: 11px;
             font-weight: 700;
@@ -234,9 +237,9 @@
             min-width: 240px;
         }
         .search-wrap:focus-within {
-            border-color: var(--primary);
+            border-color: var(--accent);
             background: #fff;
-            box-shadow: 0 0 0 6px rgba(0,0,0,0.06);
+            box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.08);
         }
         .search-wrap input {
             border: 0;
@@ -254,7 +257,7 @@
             font-size: 16px;
             transition: var(--transition);
         }
-        .search-wrap button:hover { color: var(--primary); }
+        .search-wrap button:hover { color: var(--accent); }
 
         .mobile-toggle {
             display: none;
@@ -271,7 +274,7 @@
         #mobileMenu {
             display: none;
             background: #fff;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(30, 58, 138, 0.06);
             padding: 16px 0 24px;
         }
         #mobileMenu ul {
@@ -290,10 +293,10 @@
             color: var(--primary);
             transition: var(--transition);
         }
-        #mobileMenu ul li a:hover { background: var(--surface); }
+        #mobileMenu ul li a:hover { background: var(--surface); color: var(--accent); }
         #mobileMenu ul li a i { width: 24px; color: var(--muted); }
 
-        /* ========== HERO – B&W ========== */
+        /* ========== HERO – AURORA ========== */
         .hero {
             position: relative;
             display: flex;
@@ -303,14 +306,14 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 24px 24px 0;
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
         }
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-            opacity: 0.15;
+            opacity: 0.08;
             z-index: 0;
         }
         .hero .container {
@@ -320,7 +323,7 @@
         .hero .badge {
             display: inline-block;
             background: rgba(255,255,255,0.12);
-            color: #ddd;
+            color: #bfdbfe;
             padding: 6px 20px;
             border-radius: 60px;
             font-weight: 600;
@@ -328,6 +331,7 @@
             letter-spacing: 0.4px;
             margin-bottom: 20px;
             backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.08);
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
@@ -338,8 +342,14 @@
             max-width: 660px;
             margin-bottom: 16px;
         }
+        .hero h1 .highlight {
+            background: linear-gradient(120deg, #93c5fd, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .hero p {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.85);
             font-size: 18px;
             max-width: 540px;
             margin-bottom: 32px;
@@ -367,6 +377,7 @@
             font-size: 30px;
             font-weight: 700;
             letter-spacing: -0.02em;
+            color: var(--primary);
         }
         .section-header .title-group p {
             color: var(--muted);
@@ -375,7 +386,7 @@
         }
         .section-header .view-all {
             font-weight: 600;
-            color: var(--primary);
+            color: var(--accent);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -385,10 +396,10 @@
         }
         .section-header .view-all:hover {
             gap: 14px;
-            color: #000;
+            color: var(--primary);
         }
 
-        /* ========== CATEGORIES – B&W ========== */
+        /* ========== CATEGORIES – AURORA ========== */
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -407,7 +418,7 @@
         .cat-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
-            border-color: #ccc;
+            border-color: var(--accent);
             background: #fff;
         }
         .cat-card .icon-wrap {
@@ -419,17 +430,19 @@
             place-items: center;
             margin: 0 auto 14px;
             font-size: 26px;
-            color: var(--primary);
+            color: var(--accent);
             transition: var(--transition);
         }
         .cat-card:hover .icon-wrap {
-            background: var(--primary);
+            background: var(--accent);
             color: #fff;
             transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
         }
         .cat-card h4 {
             font-size: 16px;
             font-weight: 600;
+            color: var(--primary);
         }
         .cat-card .count {
             font-size: 13px;
@@ -437,7 +450,7 @@
             margin-top: 6px;
         }
 
-        /* ========== PRODUCTS – B&W ========== */
+        /* ========== PRODUCTS – AURORA ========== */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -456,7 +469,7 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
-            border-color: #ccc;
+            border-color: var(--accent);
         }
         .product-card .img-wrap {
             position: relative;
@@ -469,26 +482,27 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
-            filter: grayscale(10%);
+            filter: saturate(1.05);
         }
         .product-card:hover .img-wrap img {
             transform: scale(1.05);
-            filter: grayscale(0%);
+            filter: saturate(1.15);
         }
         .product-card .badge {
             position: absolute;
             top: 14px;
             left: 14px;
-            background: var(--primary);
+            background: var(--accent);
             color: #fff;
             padding: 4px 16px;
             border-radius: 60px;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.3px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.30);
         }
         .product-card .badge.sale {
-            background: #555;
+            background: #475569;
             color: #fff;
         }
         .product-card .wish-btn {
@@ -498,17 +512,18 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.90);
+            background: rgba(255,255,255,0.92);
             display: grid;
             place-items: center;
             font-size: 17px;
             color: var(--muted);
             transition: var(--transition);
             backdrop-filter: blur(4px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         .product-card .wish-btn:hover {
             background: #fff;
-            color: #000;
+            color: #ef4444;
             transform: scale(1.10);
         }
         .product-card .body {
@@ -520,7 +535,7 @@
         }
         .product-card .body .category-tag {
             font-size: 12px;
-            color: var(--muted-light);
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.6px;
             font-weight: 600;
@@ -533,6 +548,7 @@
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            color: var(--primary);
         }
         .product-card .body .price-row {
             display: flex;
@@ -555,7 +571,7 @@
             align-items: center;
             gap: 6px;
             font-size: 14px;
-            color: #888;
+            color: #f59e0b;
         }
         .product-card .body .rating span {
             color: var(--muted);
@@ -581,14 +597,15 @@
             gap: 8px;
         }
         .product-card .footer .add-btn:hover {
-            background: #2a2a2a;
+            background: var(--accent);
             transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
         }
         .product-card .footer .add-btn.added {
             background: var(--success);
         }
 
-        /* ========== DEAL – B&W ========== */
+        /* ========== DEAL – AURORA ========== */
         .deal-wrap {
             display: flex;
             gap: 0;
@@ -596,6 +613,7 @@
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
+            border: 1px solid rgba(30, 58, 138, 0.06);
         }
         .deal-wrap .deal-img {
             flex: 0 0 48%;
@@ -606,7 +624,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(20%);
+            filter: saturate(1.1);
         }
         .deal-wrap .deal-content {
             flex: 1;
@@ -617,7 +635,7 @@
         }
         .deal-wrap .deal-content .tag {
             display: inline-block;
-            background: #555;
+            background: var(--accent);
             color: #fff;
             padding: 6px 18px;
             border-radius: 60px;
@@ -627,11 +645,13 @@
             letter-spacing: 0.6px;
             align-self: flex-start;
             margin-bottom: 14px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
         }
         .deal-wrap .deal-content h3 {
             font-size: 30px;
             font-weight: 700;
             margin-bottom: 8px;
+            color: var(--primary);
         }
         .deal-wrap .deal-content .desc {
             color: var(--muted);
@@ -656,7 +676,7 @@
             margin: 6px 0 18px;
         }
         .deal-wrap .deal-content .stock strong {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .timer-grid {
@@ -671,6 +691,7 @@
             border-radius: var(--radius-sm);
             min-width: 72px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
         }
         .timer-box .num {
             font-size: 28px;
@@ -679,12 +700,12 @@
         }
         .timer-box .label {
             font-size: 11px;
-            opacity: 0.70;
+            opacity: 0.75;
             text-transform: uppercase;
             letter-spacing: 0.6px;
         }
 
-        /* ========== TESTIMONIALS – B&W ========== */
+        /* ========== TESTIMONIALS – AURORA ========== */
         .testimonials-scroll {
             display: flex;
             gap: 24px;
@@ -697,7 +718,7 @@
             height: 6px;
         }
         .testimonials-scroll::-webkit-scrollbar-thumb {
-            background: #aaa;
+            background: #c7d2fe;
             border-radius: 60px;
         }
         .testimonial-card {
@@ -708,12 +729,14 @@
             box-shadow: var(--shadow);
             scroll-snap-align: start;
             transition: var(--transition);
+            border: 1px solid rgba(30, 58, 138, 0.04);
         }
         .testimonial-card:hover {
             box-shadow: var(--shadow-hover);
+            border-color: var(--accent-light);
         }
         .testimonial-card .stars {
-            color: #888;
+            color: #f59e0b;
             font-size: 18px;
             letter-spacing: 3px;
             margin-bottom: 12px;
@@ -736,7 +759,7 @@
             border-radius: 50%;
             object-fit: cover;
             background: var(--surface);
-            filter: grayscale(30%);
+            border: 2px solid var(--accent-light);
         }
         .testimonial-card .author .name {
             font-weight: 600;
@@ -747,9 +770,9 @@
             color: var(--muted);
         }
 
-        /* ========== NEWSLETTER – B&W ========== */
+        /* ========== NEWSLETTER – AURORA ========== */
         .newsletter-wrap {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #2563eb 100%);
             border-radius: var(--radius);
             padding: 52px 60px;
             color: #fff;
@@ -758,6 +781,7 @@
             justify-content: space-between;
             gap: 40px;
             flex-wrap: wrap;
+            box-shadow: 0 20px 50px -12px rgba(30, 58, 138, 0.35);
         }
         .newsletter-wrap .text h3 {
             font-size: 28px;
@@ -765,7 +789,7 @@
             margin-bottom: 4px;
         }
         .newsletter-wrap .text p {
-            opacity: 0.75;
+            opacity: 0.80;
             font-size: 16px;
         }
         .newsletter-wrap form {
@@ -782,40 +806,42 @@
             border-radius: 60px;
             border: 0;
             font-size: 15px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.10);
             color: #fff;
             transition: var(--transition);
             outline: 2px solid transparent;
         }
         .newsletter-wrap form input::placeholder {
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.50);
         }
         .newsletter-wrap form input:focus {
-            outline-color: #aaa;
-            background: rgba(255,255,255,0.15);
+            outline-color: #93c5fd;
+            background: rgba(255,255,255,0.18);
         }
         .newsletter-wrap form .btn {
             background: #fff;
-            color: #000;
+            color: var(--primary);
             border-color: #fff;
             padding: 16px 36px;
+            font-weight: 700;
         }
         .newsletter-wrap form .btn:hover {
-            background: #ddd;
-            border-color: #ddd;
+            background: #dbeafe;
+            border-color: #dbeafe;
+            transform: translateY(-2px);
         }
         #newsletterMsg {
             margin-top: 12px;
             font-size: 14px;
-            opacity: 0.9;
+            opacity: 0.95;
             width: 100%;
         }
 
-        /* ========== FOOTER – B&W ========== */
+        /* ========== FOOTER – AURORA ========== */
         footer {
             margin-top: 20px;
             padding: 48px 0 32px;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(30, 58, 138, 0.06);
         }
         .footer-grid {
             display: grid;
@@ -850,8 +876,10 @@
             font-size: 17px;
         }
         .footer-grid .brand-col .socials a:hover {
-            background: var(--primary);
+            background: var(--accent);
             color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
         }
         .footer-grid .col h5 {
             font-weight: 700;
@@ -871,12 +899,13 @@
             transition: var(--transition);
         }
         .footer-grid .col ul li a:hover {
-            color: #000;
+            color: var(--accent);
+            padding-left: 4px;
         }
         .footer-bottom {
             text-align: center;
             padding-top: 24px;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(30, 58, 138, 0.06);
             color: var(--muted-light);
             font-size: 14px;
         }
@@ -1015,7 +1044,7 @@
         <section class="hero" aria-label="Hero banner">
             <div class="container">
                 <div class="badge"><i class="fas fa-sparkles"></i> New Collection 2026</div>
-                <h1>Discover Premium <br>Essentials</h1>
+                <h1>Discover <span class="highlight">Premium</span> <br>Essentials</h1>
                 <p>Curated fashion, tech & accessories with free shipping on your first order. Limited-time deals await.</p>
                 <div class="actions">
                     <button class="btn btn-primary" id="shopNow"><i class="fas fa-arrow-right"></i> Shop Now</button>
@@ -1375,7 +1404,7 @@
                 }, 1500);
             }
             const cartBtn = document.getElementById('cartBtn');
-            cartBtn.style.color = '#000';
+            cartBtn.style.color = 'var(--accent)';
             setTimeout(() => cartBtn.style.color = '', 400);
         }
 
@@ -1455,7 +1484,7 @@
             updateCartCount();
             const orig = this.innerHTML;
             this.innerHTML = '<i class="fas fa-check"></i> Added!';
-            this.style.background = '#222';
+            this.style.background = 'var(--success)';
             setTimeout(() => {
                 this.innerHTML = orig;
                 this.style.background = '';
@@ -1467,12 +1496,12 @@
             const email = newsletterEmail.value.trim();
             if (!email || !email.includes('@')) {
                 newsletterMsg.textContent = 'Please enter a valid email address.';
-                newsletterMsg.style.color = '#ffb3b3';
+                newsletterMsg.style.color = '#fca5a5';
                 newsletterMsg.style.display = 'block';
                 return;
             }
             newsletterMsg.textContent = '🎉 Thanks for subscribing!';
-            newsletterMsg.style.color = '#aaa';
+            newsletterMsg.style.color = '#bfdbfe';
             newsletterMsg.style.display = 'block';
             newsletterEmail.value = '';
             setTimeout(() => {
@@ -1501,7 +1530,7 @@
             }
         });
 
-        console.log('⚫ NexusShop – monochrome theme loaded.');
+        console.log('🔵 NexusShop – Aurora theme loaded.');
     </script>
 </body>
 </html>
